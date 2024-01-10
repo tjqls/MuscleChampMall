@@ -91,4 +91,20 @@ public class ReviewController {
 
     return String.format("redirect:/review/modify/%s", id);
   }
+
+  @GetMapping("/delete/{id}")
+  public String delete(@PathVariable("id") Long id,
+                       Principal principal) {
+
+    Review review = this.reviewService.findById(id);
+
+    Member author = this.memberService.findByUsername(principal.getName());
+
+    this.reviewService.deleteValidate(review, author);
+
+    this.reviewService.delete(review);
+
+    return "review/list";
+
+  }
 }

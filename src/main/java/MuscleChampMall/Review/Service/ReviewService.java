@@ -65,4 +65,19 @@ public class ReviewService {
 
     this.reviewRepository.save(review);
   }
+
+  public void deleteValidate(Review review, Member author) {
+
+    if (review == null) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "존재하지 않는 게시글입니다.");
+    }
+
+    if (!author.getUsername().equals(review.getAuthor().getUsername())) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "삭제 권한이 없습니다.");
+    }
+  }
+
+  public void delete(Review review) {
+    this.reviewRepository.delete(review);
+  }
 }
