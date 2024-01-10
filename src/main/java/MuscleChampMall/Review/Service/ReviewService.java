@@ -1,8 +1,10 @@
 package MuscleChampMall.Review.Service;
 
 import MuscleChampMall.Base.Exception.DataNotFoundException;
+import MuscleChampMall.Member.Entity.Member;
 import MuscleChampMall.Review.Entity.Review;
 import MuscleChampMall.Review.Repository.ReviewRepository;
+import MuscleChampMall.Review.dto.ReviewCreateForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +26,17 @@ public class ReviewService {
     if (review.isPresent()){
       return review.get();
     } throw new DataNotFoundException("review not found");
+  }
+
+  public Review create(ReviewCreateForm reviewCreateForm, Member author) {
+
+    Review review = Review.builder()
+        .content(reviewCreateForm.getContent())
+        .starScore(reviewCreateForm.getStarScore())
+        .author(author)
+        .build();
+    this.reviewRepository.save(review);
+
+    return review;
   }
 }
