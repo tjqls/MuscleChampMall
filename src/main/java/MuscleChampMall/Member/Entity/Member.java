@@ -1,5 +1,6 @@
 package MuscleChampMall.Member.Entity;
 
+import MuscleChampMall.Base.BaseEntity;
 import MuscleChampMall.Member.MemberRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +16,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @ToString(callSuper = true)
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Column(unique = true)
     private String username;
