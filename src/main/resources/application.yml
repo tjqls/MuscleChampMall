@@ -51,9 +51,9 @@ spring:
 
 file:
   root:
-    path: /Users/seobin/Desktop/file
+    path: C:\Users\hanjaehyun\Pictures\genFile
   resource:
-    path: file:/Users/seobin/Desktop/file/
+    path: C:\Users\hanjaehyun\Pictures\genFile
   request:
     path: /file/**
   origin:
@@ -61,7 +61,7 @@ file:
 
 
 custom:
-  genFileDirPath: /Users/seobin/Desktop/genfile
+  genFileDirPath: C:\Users\hanjaehyun\Pictures\genFile
 
 
 server:

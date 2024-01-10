@@ -1,4 +1,9 @@
 package MuscleChampMall.Member.Repository;
 
-public class MemberRepository {
+import MuscleChampMall.Member.Entity.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface MemberRepository extends JpaRepository<Member,Long> {
 }
