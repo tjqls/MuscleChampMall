@@ -1,4 +1,4 @@
-package MuscleChampMall.Base;
+package MuscleChampMall.Base.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

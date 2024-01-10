@@ -1,6 +1,6 @@
 package MuscleChampMall.Member.Entity;
 
-import MuscleChampMall.Base.BaseEntity;
+import MuscleChampMall.Base.Entity.BaseEntity;
 import MuscleChampMall.Member.MemberRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

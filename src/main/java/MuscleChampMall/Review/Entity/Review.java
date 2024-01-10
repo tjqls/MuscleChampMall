@@ -1,6 +1,6 @@
 package MuscleChampMall.Review.Entity;
 
-import MuscleChampMall.Base.BaseEntity;
+import MuscleChampMall.Base.Entity.BaseEntity;
 import MuscleChampMall.Member.Entity.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;

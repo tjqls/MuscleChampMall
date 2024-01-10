@@ -1,6 +1,6 @@
 package MuscleChampMall.Product.Entity;
 
-import MuscleChampMall.Base.BaseEntity;
+import MuscleChampMall.Base.Entity.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
