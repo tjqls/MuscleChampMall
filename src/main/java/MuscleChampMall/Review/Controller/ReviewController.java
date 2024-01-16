@@ -89,7 +89,7 @@ public class ReviewController {
 
     this.reviewService.modify(review, reviewCreateForm);
 
-    return String.format("redirect:/review/modify/%s", id);
+    return String.format("redirect:/review/detail/%s", id);
   }
 
   @GetMapping("/delete/{id}")
@@ -104,7 +104,7 @@ public class ReviewController {
 
     this.reviewService.delete(review);
 
-    return "review/list";
+    return "redirect:/review/list";
 
   }
 }

@@ -5,7 +5,6 @@ import MuscleChampMall.Member.Entity.Member;
 import MuscleChampMall.Review.Entity.Review;
 import MuscleChampMall.Review.Repository.ReviewRepository;
 import MuscleChampMall.Review.dto.ReviewCreateForm;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
