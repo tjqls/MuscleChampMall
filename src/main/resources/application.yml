@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   profiles:
     active: dev
@@ -22,47 +24,5 @@ spring:
 #            user-info-uri: https://kapi.kakao.com/v2/user/me
 #            user-name-attribute: id
 
-
-  datasource:
-    username: root
-    url: jdbc:mariadb://localhost:3306/mcm?useUnicode=true&characterEncoding=utf8&serverTimeZone=Asia/Seoul
-    driverClassName: org.mariadb.jdbc.Driver
-    password:
-  thymeleaf:
-    cache: false
-    prefix: file:src/main/resources/templates/
-  jpa:
-    properties:
-      hibernate:
-        format_sql: 'true'
-        show_sql: 'true'
-    hibernate:
-      ddl-auto: update
-  resources:
-    chain:
-      strategy:
-        content:
-          enabled: true
-          paths: /**
-  servlet:
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 10MB
-
-file:
-  root:
-    path: /Users/seobin/Desktop/file
-  resource:
-    path: file:/Users/seobin/Desktop/file/
-  request:
-    path: /file/**
-  origin:
-    path: /file/
-
-
 custom:
   genFileDirPath: /Users/seobin/Desktop/genfile
-
-
-server:
-  port: '8080'

@@ -23,7 +23,7 @@ public class BaseEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private LocalDateTime crateDate;
+  private LocalDateTime createDate;
 
   private LocalDateTime modifyDate;
 }
