@@ -38,6 +38,7 @@ public class ReviewService {
         .content(reviewCreateForm.getContent())
         .starScore(reviewCreateForm.getStarScore())
         .author(author)
+        .createDate(LocalDateTime.now())
         .build();
     this.reviewRepository.save(review);
 
